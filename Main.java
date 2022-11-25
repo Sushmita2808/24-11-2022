@@ -1,3 +1,71 @@
+/*1.	Write a program by using JdbcTemplate for the following requirements
+
+1.	Create table categories and products with the following structures.
+
+categories
+	idint(11) unsigned not null, and the same column is the primary key
+	namenvarchar(50) not null
+	descriptionnvarchar(100)
+
+products
+	idint(11) unsigned not null, and the same column is the primary key
+	namenvarchar(50) not null
+	pricedouble not null
+	unitsInStockint (at present how many units are there?)
+	discontinued(whether the product is still doing business or not)
+
+2.	Create a spring core application to achieve the following requirements
+
+CategoryDAO
+	
+public void save(Category category);
+
+publicCategorygetById(int id);
+// select * from categories where id=1;
+	
+public void update(Category category);
+	
+public void deleteById(int id);
+
+public List<Category>getAll();
+
+public Category getByName(String name);
+
+// select * from Categories where name = ‘Beverages’;
+
+publicList<Category>getByNames(String substring);
+
+//select * from Categories where name like ‘Con%’;
+
+
+===========================================================================
+
+ProductDAO
+
+public void save(Product product);
+
+public ProductgetById(int id);
+	
+public void update(Productproduct);
+	
+public void deleteById(int id);
+
+public List<Product>getAll();
+
+public ProductgetByName(String name);
+
+public List<Product >getByNames(String substring);
+
+
+public List<Product>getByBetweenPrice(double iPrice, double oPrice);
+// select * from products where price between 300 and 1200;
+
+public List<Product>getDiscontinuedProducts();
+
+3.	You can create a spring.xml to do these activities.
+
+*/
+
 package com.spring.core.jdbc.main;
 
 import java.util.List;
